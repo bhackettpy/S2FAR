@@ -570,22 +570,34 @@ video {
   /* ... */
 }
 
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+}
+
+.scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-track 35s linear infinite;
+  will-change: transform;
+}
+
 .scroll-content {
   display: flex;
   gap: 20px;
-  white-space: nowrap;
-
-  animation: scroll 25s linear infinite;
 }
 
 .scroll-content img {
-  width: 150px;
-  height: auto;
+  width: auto;
+  height: 100px;
   object-fit: contain;
+  flex-shrink: 0;
   margin: 0 10px;
 }
 
-@keyframes scroll {
+@keyframes scroll-track {
   0% {
     transform: translateX(0%);
   }
@@ -593,42 +605,6 @@ video {
     transform: translateX(-50%);
   }
 }
-
-
-
-/* Pause scrolling on hover 
-.scroll-container:hover .scroll-content {
-  animation-play-state: paused;
-}
-*/
-
-.scroll-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  mask-image: linear-gradient(
-    90deg,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
-  );
-}
-.scroll-container img {
-  height: 100px; /* or any fixed height you want */
-  width: auto;
-  object-fit: cover; /* ensures they fill their box nicely */
-  flex-shrink: 0; /* prevents them from shrinking to fit */
-}
-
 
 section {
   background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR...)
