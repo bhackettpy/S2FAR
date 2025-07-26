@@ -137,6 +137,20 @@
         </div>
       </div>
     </nav>
+     <script>
+      const menuToggle = document.querySelector(
+        'button[aria-controls="mobile-menu"]'
+      );
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        // Swap icons
+        const icons = menuToggle.querySelectorAll("svg");
+        icons.forEach((icon) => icon.classList.toggle("hidden"));
+      });
+    </script>
 
     <section class="relative bg-gray-300 lg:px-96 md:px-48 px-4 pt-16 sm:py-32">
       <div class="container mx-auto">

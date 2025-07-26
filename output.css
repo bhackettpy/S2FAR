@@ -569,15 +569,12 @@ video {
 @theme {
   /* ... */
 }
-.scroll-container {
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-}
 
 .scroll-content {
   display: flex;
   gap: 20px;
+  white-space: nowrap;
+
   animation: scroll 25s linear infinite;
 }
 
@@ -590,17 +587,14 @@ video {
 
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
   }
 }
 
-.scroll-content {
-  display: flex;
-  animation: scroll 25s linear infinite;
-}
+
 
 /* Pause scrolling on hover 
 .scroll-container:hover .scroll-content {
