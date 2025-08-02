@@ -137,7 +137,7 @@
         </div>
       </div>
     </nav>
-     <script>
+    <script>
       const menuToggle = document.querySelector(
         'button[aria-controls="mobile-menu"]'
       );
@@ -152,63 +152,73 @@
       });
     </script>
 
-    <section class="relative bg-gray-300 lg:px-96 md:px-48 px-4 pt-16 sm:py-32">
+    <section class="relative bg-gray-300 lg:px-72 md:px-48 px-4 pt-16 sm:py-32">
       <div class="container mx-auto">
+        <!-- Back Button -->
+        <div class="flex">
+          <div class="mb-6 px-8 md:w-2/5">
+            <a
+              href="team.html"
+              class="inline-block font-semibold text-xl hover:text-gray-600"
+            >
+              ← Back
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Layout -->
         <div class="flex flex-wrap justify-between">
-          <div class="order-2 w-full p-4 text-black md:order-2 md:w-1/2">
-            <h1 class="text-6xl font-bold">Lauren Weil</h1>
-            <p class="mt-3 text-3xl italic">Undergraduate Student</p>
-            <div class="mt-3 flex flex-wrap">
+          <!-- Text Column -->
+          <div
+            class="order-2 w-full px-4 text-black md:order-2 md:pl-12 md:w-2/3"
+          >
+            <h1 class="text-5xl font-bold">Lauren Weil</h1>
+            <p class="mt-2 text-xl">Undergraduate Student</p>
+
+            <div class="mt-5">
+              <h2 class="font-bold text-2xl">Contact</h2>
+            </div>
+            <div class="mt-2 flex flex-wrap">
               <div class="w-1/2">
                 <a href="mailto:Lauren.Weil866@gmail.com"
                   >Lauren.Weil866@gmail.com</a
                 >
               </div>
             </div>
-            <p class="mt-3">
+
+            <div class="mt-5">
+              <h2 class="font-bold text-2xl">About</h2>
+            </div>
+            <p class="mt-2 leading-relaxed">
               Currently pursuing a bachelor's degree in Aerospace Engineering,
-              Lauren Weil is involved in unmanned aerial and surface vehicle
-              systems, vehicle fabrication, and exploring hands-on applications
-              of engineering.
-            </p>
-            <p>
-              As OSU-Tulsa's OAIRE lab's inaugural Excelsior LaunchPad Fellow,
-              Lauren supported the setup of WindShape wind-tunnel
-              infrastructure, participated in Particle Image Velocimetry (PIV)
-              testing, and presented on LiDAR integration with quadruped
-              robotics for emergency response. Her recent work includes the
-              configuration of Hydronalix's sonar-equipped aquatic vehicles
-              designed for mapping and rescue operations through OAIRE.
-            </p>
-            <p>
-              Lauren is a member of Georgia Tech's HyTech Racing Aerocomposites
-              team, where she contributes to the design and fabrication of an
-              electric Formula SAE vehicle. Her work includes aerodynamic
-              optimization through undertray and tire dam CAD design, CFD
-              validation, and carbon fiber layups for aerodynamic vehicle
-              components.
-            </p>
-            <p>
-              She also participates in Georgia Tech's Grand Challenges program,
-              where Lauren collaborates with a multidisciplinary team in
-              developing a solar-powered UV-C sterilization system for medical
-              tools in resource-scarce environments. The project included
-              bacterial testing for sterilization validation and received the
-              Best Prototype Potential award at exhibition.She also participates
-              in Georgia Tech's Grand Challenges program, where Lauren
-              collaborates with a multidisciplinary team in developing a
+              Lauren Weil is actively engaged in unmanned aerial and surface
+              vehicle systems, vehicle fabrication, and hands-on engineering
+              applications. As OSU-Tulsa's OAIRE lab's inaugural Excelsior
+              LaunchPad Fellow, she supported the setup of WindShape wind-tunnel
+              infrastructure, conducted Particle Image Velocimetry (PIV)
+              testing, and presented research on LiDAR integration with
+              quadruped robotics for emergency response. Her recent work
+              includes configuring Hydronalix's sonar-equipped aquatic vehicles
+              for mapping and rescue operations through OAIRE. At Georgia Tech,
+              Lauren contributes to the HyTech Racing Aerocomposites team, where
+              she designs and fabricates components for an electric Formula SAE
+              vehicle, focusing on aerodynamic optimization through undertray
+              and tire dam CAD modeling, CFD validation, and carbon fiber
+              layups. She also participates in Georgia Tech's Grand Challenges
+              program, collaborating with a multidisciplinary team to develop a
               solar-powered UV-C sterilization system for medical tools in
-              resource-scarce environments. The project included bacterial
-              testing for sterilization validation and received the Best
-              Prototype Potential award at exhibition.
+              resource-scarce environments—a project that included bacterial
+              testing for sterilization validation and earned the Best Prototype
+              Potential award at exhibition.
             </p>
           </div>
 
-          <div class="order-1 md:pl-40 p-8 md:order-1 justify-center md:w-1/2">
+          <!-- Image Column -->
+          <div class="order-1 px-8 md:order-1 justify-center md:w-1/3">
             <img
-              class="object-contain w-full rounded-lg sm:max-h-full h-96 md:h-auto md:w-96"
+              class="object-contain w-full rounded-lg sm:max-h-full h-96 md:h-auto md:w-96 shadow-md"
               src="img/Lauren-Weil.jpg"
-              alt=""
+              alt="Lauren Weil"
             />
           </div>
         </div>
