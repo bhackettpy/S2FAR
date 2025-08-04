@@ -628,3 +628,16 @@ section {
   background: radial-gradient(circle, #ff007f, #5200ff);
   animation: rotateBackground 20s linear infinite;
 }
+
+#flip-text {
+  display: inline-block;
+  animation: flip 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+
+@keyframes flip {
+  0%   { transform: rotateX(0deg); opacity: 1; }
+  50%  { transform: rotateX(90deg); opacity: 0; }
+  100% { transform: rotateX(0deg); opacity: 1; }
+}
