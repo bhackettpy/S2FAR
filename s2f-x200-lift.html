@@ -84,18 +84,17 @@
                 <a
                   href="index.html"
                   class="rounded-md px-3 py-2 text-sm font-medium text-white"
-                  aria-current="page"
                   >Home</a
                 >
                 <a
                   href="team.html"
                   aria-current="page"
-                  class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >Team</a
                 >
                 <a
-                  href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                  href="projects.html"
+                  class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   >Projects</a
                 >
                 <a
@@ -110,22 +109,22 @@
       </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
+      <div class="sm:hidden hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a
             href="index.html"
-            class="block rounded-md px-3 py-2 text-base font-medium text-white"
+            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            aria-current="page"
             >Home</a
           >
           <a
             href="team.html"
-            aria-current="page"
-            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >Team</a
           >
           <a
-            href="#"
+            href="projects.html"
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >Projects</a
           >
@@ -155,57 +154,64 @@
     <section class="relative bg-gray-300 lg:px-72 md:px-48 px-4 pt-16 sm:py-32">
       <div class="container mx-auto">
         <div class="flex">
-          <div class="mb-6 px-8 md:w-2/5 text-black">
+          <div class="mb-6 md:w-2/5">
             <a
-              href="team.html"
+              href="projects.html"
               class="inline-block font-semibold text-xl hover:text-gray-600"
             >
               ← Back
             </a>
           </div>
         </div>
-        <div class="flex flex-wrap justify-between">
-          <div class="order-2 w-full md:pl-12 text-black md:order-2 md:w-2/3">
-            <h1 class="text-5xl font-bold">Ahmed Ghareeb</h1>
-            <p class="mt-2 text-xl">PhD Student</p>
+        <div class="flex flex-wrap items-center">
+          <div class="w-full pr-6 md:w-1/2">
+            <h1 class="text-4xl font-bold">S2F-X200 Lift + Cruise Vehicle</h1>
 
-            <div class="mt-5">
-              <h2 class="font-bold text-2xl">Contact</h2>
-            </div>
-            <div class="mt-2 flex flex-wrap">
-              <div class="w-1/2">
-                <a
-                  href="mailto:aghareeb@uokirkuk.edu.iq"
-                  class="hover:text-gray-600"
-                  >aghareeb@uokirkuk.edu.iq</a
-                >
-              </div>
-            </div>
-
-            <div class="mt-5">
-              <h2 class="font-bold text-2xl">About</h2>
-            </div>
-
-            <p class="mt-2 leading-relaxed">
-              Ahmed Ghareeb is a PhD researcher in Oklahoma State University’s
-              Simulation to Flight Applied Research Lab (S2FAR). He earned an
-              M.S. in Mechanical Engineering from the University of Dayton
-              (2017) and lectures in mechanical engineering at the University of
-              Kirkuk, Iraq. Ahmed’s research blends AI-driven control, flight
-              simulation, CFD, and energy-system analytics to develop
-              energy-aware, turbulence-resilient flight-control architectures
-              for fixed-wing and rotorcraft sUAVs.
+            <p class="mt-6 leading-relaxed">
+              This Group 2 UAS employs an LPC architecture—dedicated lift
+              propulsors for vertical flight and a cruise propulsor for forward
+              flight—enabling efficient VTOL-to-FF transition while preserving
+              fixed-wing cruise performance. The airframe is largely 3D-printed
+              to reduce cost and lead time while supporting rapid, iterative
+              design cycles. A real-time MATLAB/Simulink simulation environment
+              (VISTA) serves as the vehicle’s digital twin for trim analysis,
+              model linearization, and controller design, and is integrated with
+              hardware and visualization for seamless simulation-to-flight
+              workflows. The flight control stack follows a modular
+              architecture—inceptor mappings, a Trajectory Control System (TCS)
+              middle loop, Explicit Model-Following (EMF) inner loops, and an
+              intuitive control allocation—supporting testing across VTOL,
+              transition, and forward-flight modes.
             </p>
           </div>
-
-          <div class="order-1 px-8 md:order-1 justify-center md:w-1/3">
-            <img
-              class="object-contain w-full rounded-lg sm:max-h-full h-96 md:h-auto md:w-96"
-              src="img/Ahmed-Ghareeb.jpg"
-              alt=""
-            />
+          <div class="w-full pl-12 md:w-1/2">
+            <div class="flex justify-center">
+              <img
+                class="h-48"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Oklahoma_State_University_system_logo.svg/2560px-Oklahoma_State_University_system_logo.svg.png"
+              />
+            </div>
           </div>
         </div>
+
+        <div class="mt-12 flex flex-wrap">
+          <div class="w-full pr-6 md:w-2/3">
+            <h2 class="text-4xl font-bold">Results & Images</h2>
+          </div>
+        </div>
+        <div class="mt-12 flex space-x-8">
+          <div class="w-full text-white md:w-1/3">
+            <img class="rounded-md" src="img/CAD 1.jpg" />
+          </div>
+          <div class="w-full text-white md:w-1/3">
+            <img class="rounded-md" src="img/s2f-testing.jpg" />
+          </div>
+          <div class="w-full text-white md:w-1/3">
+            <img class="rounded-md" src="img/FS-1.jpg" />
+          </div>
+        </div>
+
+      
       </div>
     </section>
   </body>
