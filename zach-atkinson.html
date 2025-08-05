@@ -137,7 +137,7 @@
         </div>
       </div>
     </nav>
-     <script>
+    <script>
       const menuToggle = document.querySelector(
         'button[aria-controls="mobile-menu"]'
       );
@@ -152,10 +152,9 @@
       });
     </script>
 
-    <section class="relative bg-gray-300 lg:px-72 md:px-48 px-4 pt-16 sm:py-32">
+    <section class="relative bg-gray-300 lg:px-24 px-4 pt-32 pb-20">
       <div class="container mx-auto">
-
-          <div class="flex">
+        <div class="flex">
           <div class="mb-6 px-8 md:w-2/5">
             <a
               href="team.html"
@@ -165,25 +164,25 @@
             </a>
           </div>
         </div>
-        <div class="flex flex-wrap justify-between">
-          <div class="order-2 w-full px-4 text-black md:order-2 md:pl-12 md:w-2/3">
+        <div class="flex flex-wrap">
+          <div class="order-2 w-full text-black md:order-2 md:w-2/3">
             <h1 class="text-5xl font-bold">Zach Atkinson</h1>
 
-            <p class="mt-2 text-xl ">MS Student</p>
+            <p class="mt-2 text-xl">MS Student</p>
 
-             <div class="mt-5">
-              <h2 class="font-bold text-2xl ">Contact</h2>
+            <div class="mt-5">
+              <h2 class="font-bold text-2xl">Contact</h2>
             </div>
             <div class="mt-2 flex flex-wrap">
               <div class="w-1/2">
-                <a href="mailto:zaatkin@okstate.edu">zaatkin@okstate.edu</a>
+                <a href="mailto:zaatkin@okstate.edu" lass="hover:text-gray-600">zaatkin@okstate.edu</a>
               </div>
             </div>
 
-             <div class="mt-5">
+            <div class="mt-5">
               <h2 class="font-bold text-2xl">About</h2>
             </div>
-            <p class="mt-2 leading-relaxed">
+            <p class="mt-2 leading-relaxed max-w-prose">
               Zach Atkinson is a graduate student pursuing his Master’s degree
               in Aerospace Engineering at Oklahoma State University. He joined
               the Simulation to Flight Applied Research Laboratory (S2FAR) in
@@ -202,9 +201,11 @@
             </p>
           </div>
 
-          <div class="order-1 px-8 md:order-1 justify-center md:w-1/3">
+          <div
+            class="w-full flex justify-center md:order-1 md:w-1/3 md:block px-8 mb-5"
+          >
             <img
-              class="object-contain w-full rounded-lg sm:max-h-full h-96 md:h-auto md:w-96 shadow-md"
+              class="object-contain rounded-lg shadow-md h-96 w-auto max-w-full md:h-auto md:w-96"
               src="img/Zach-Atkinson.jpg"
               alt="Zach Atkinson"
             />
