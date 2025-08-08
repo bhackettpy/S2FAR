@@ -110,7 +110,7 @@
       </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
+      <div class="sm:hidden hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a
@@ -138,17 +138,19 @@
       </div>
     </nav>
     <script>
-      const menuToggle = document.querySelector(
-        'button[aria-controls="mobile-menu"]'
-      );
-      const mobileMenu = document.getElementById("mobile-menu");
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(
+          'button[aria-controls="mobile-menu"]'
+        );
+        const mobileMenu = document.getElementById("mobile-menu");
 
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
 
-        // Swap icons
-        const icons = menuToggle.querySelectorAll("svg");
-        icons.forEach((icon) => icon.classList.toggle("hidden"));
+          // Swap icons
+          const icons = menuToggle.querySelectorAll("svg");
+          icons.forEach((icon) => icon.classList.toggle("hidden"));
+        });
       });
     </script>
 
@@ -178,9 +180,7 @@
       </div>
     </section>
 
-    <section
-      class="relative bg-gray-300 lg:px-24 px-4 pt-16 pb-20 "
-    >
+    <section class="relative bg-gray-300 lg:px-24 px-4 pt-16 pb-20">
       <div class="container mx-auto">
         <div class="flex flex-wrap flex-col">
           <!-- Director Section -->
