@@ -659,3 +659,6 @@ section {
     animation: text-cycle 16s ease-in-out infinite;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
