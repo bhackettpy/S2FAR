@@ -580,7 +580,7 @@ video {
 .scroll-track {
   display: flex;
   width: max-content;
-  animation: scroll-track 35s linear infinite;
+  animation: scroll-track 40s linear infinite;
   will-change: transform;
 }
 
