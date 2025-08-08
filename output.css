@@ -641,3 +641,21 @@ section {
   50%  { transform: rotateX(90deg); opacity: 0; }
   100% { transform: rotateX(0deg); opacity: 1; }
 }
+
+
+@layer utilities {
+  @keyframes text-cycle {
+    0%, 10%   { transform: translateY(0); }
+    14%, 24%  { transform: translateY(-3rem); }
+    28%, 38%  { transform: translateY(-6rem); }
+    42%, 52%  { transform: translateY(-9rem); }
+    56%, 66%  { transform: translateY(-12rem); }
+    70%, 80%  { transform: translateY(-15rem); }
+    84%, 94%  { transform: translateY(-18rem); }
+    98%, 100% { transform: translateY(0); } /* smooth reset */
+  }
+
+  .animate-text-cycle {
+    animation: text-cycle 16s ease-in-out infinite;
+  }
+}
