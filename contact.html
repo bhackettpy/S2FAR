@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body class="bg-gray-300">
-  <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
+   <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
       <div class="container mx-auto px-4">
         <div class="flex h-16 items-center justify-between relative">
           <!-- Logo -->
@@ -305,7 +305,7 @@
 <section class="relative h-[60vh] w-full">
   <!-- Hero Image -->
   <img
-    src="img/Skyway 36.jpg"
+    src="img/skyway.jpg"
     alt="Hero Banner"
     class="absolute inset-0 h-full w-full object-cover object-top"
   />
@@ -317,10 +317,10 @@
   <div class="relative z-10 flex h-full items-center justify-center text-center px-4">
     <div class="max-w-2xl">
       <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">
-        Projects
+        Contact S2FAR
       </h1>
       <p class="text-lg text-gray-200">
-        Pioneering the future of autonomous flight research
+       
       </p>
     </div>
   </div>
@@ -332,89 +332,108 @@
     >
       <div class="container mx-auto">
         <div class="flex flex-wrap flex-row">
-          <div class="mb-10 w-full text-black">
-            <h2 class="text-4xl font-bold">Projects</h2>
-          </div>
 
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-stretch"
+ <div
+            id="contact"
+            class="flex flex-col md:flex-row py-12 space-y-8 md:space-y-0 md:space-x-10  justify-center"
           >
-            <a href="ctol-testing.html" class="h-full">
-              <div
-                class="flex flex-col h-full cursor-pointer overflow-hidden rounded-lg bg-gray-100 shadow-lg transition border border-gray-300 hover:border-black"
+            <!-- 💼 Unified S2FAR Contact Panel -->
+            <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+              <form
+                action="https://formspree.io/f/mgvzkbry"
+                method="POST"
+                class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0"
               >
-                <div class="w-full overflow-hidden rounded-t-lg">
-                  <img
-                    class="h-auto w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                    src="img/ctol-testing.jpg"
-                  />
-                </div>
-                <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    Conventional Takeoff and Landing (CTOL) Flight Test
-                    Validation
-                  </h2>
-                </div>
-              </div>
-            </a>
+                <!-- 📝 Left Panel -->
+                <div class="md:w-1/2 flex flex-col justify-between space-y-6">
+                  <!-- Inline Heading and Logo -->
+                  <div
+                    class="flex flex-col items-center md:flex-row md:items-center md:space-x-4 space-y-4 md:space-y-0"
+                  >
+                    <h2 class="text-4xl font-bold text-gray-800">
+                      Partner With S2FAR
+                    </h2>
+                    <img
+                      src="img/S2FAR_Plane_Transparent_Gray.png"
+                      alt="S2FAR Logo"
+                      class="w-32 h-auto object-contain"
+                    />
+                  </div>
 
-            <a href="s2f-x200-lift.html" class="h-full">
-              <div
-                class="flex flex-col h-full cursor-pointer overflow-hidden rounded-lg bg-gray-100 shadow-lg transition border border-gray-300 hover:border-black"
-              >
-                <div class="w-full overflow-hidden rounded-t-lg">
-                  <img
-                    class="h-auto w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                    src="img/sf2 testing card.jpg"
-                  />
-                </div>
-                <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">
-                   Rapid Development of a Low-Cost Multi-Purpose Response Drone
-                  </h2>
-                </div>
-              </div>
-            </a>
+                  <!-- Description -->
+                  <p class="text-lg text-gray-600">
+                    Whether you're a small business exploring UAS solutions or a
+                    university seeking research collaboration, S2FAR is happy to
+                    discuss ways we can work with you. We will get back to you
+                    as soon as possible!
+                  </p>
 
-            <a href="tilt-wing-vtol.html" class="h-full">
-              <div
-                class="flex flex-col h-full cursor-pointer overflow-hidden rounded-lg bg-gray-100 shadow-lg transition border border-gray-300 hover:border-black"
-              >
-                <div class="w-full overflow-hidden rounded-t-lg">
-                  <img
-                    class="h-auto w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                    src="img/RRTV-3.jpg"
-                  />
-                </div>
-                <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    Active Flow Control for Tiltwing VTOL Vehicles in Transition
-                  </h2>
-                </div>
-              </div>
-            </a>
+                  <!-- Form Fields -->
+                  <div class="space-y-4">
+                    <div>
+                      <label
+                        for="email"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"
+                      />
+                    </div>
 
-            <div
-              class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300"
-            >
-              <div class="w-full overflow-hidden rounded-t-lg">
-                
-                <img
-                  class="h-auto w-full object-cover filter grayscale opacity-95"
-                  src="img/coming-soon.jpg"
-                />
-                
-              </div>
-              <div class="p-4">
-                <h2 class="text-xl font-bold text-gray-800">
-                  Simplified Vehicle Operations Flight Control Law Development
-                  for a Tiltwing UAS (Coming Soon)
-                </h2>
-              </div>
+                    <div>
+                      <label
+                        for="message"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Comments / Questions
+                      </label>
+                      <textarea
+                        name="message"
+                        id="message"
+                        rows="4"
+                        required
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+                      ></textarea>
+                    </div>
+
+                    <div>
+                      <button
+                        type="submit"
+                        class="w-full bg-gray-900 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 🗺️ Right Panel: Map Matching Height -->
+                <div class="md:w-1/2 flex">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.620900060159!2d-95.99132949999999!3d36.163296300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6eb848a31d5bf%3A0xe57f3d16fdc9b3df!2sHelmerich%20Research%20Center%20at%20OSU-Tulsa!5e1!3m2!1sen!2sus!4v1753594432473!5m2!1sen!2sus"
+                    class="w-full rounded-lg shadow-md"
+                    style="border: 0; min-height: 100%; aspect-ratio: 4/3"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </form>
             </div>
           </div>
+
+
         </div>
       </div>
+
     </section>
+
+
   </body>
 </html>
