@@ -116,6 +116,11 @@
                 class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
                 >Publications</a
               >
+               <a
+                href="/about"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+                >About</a
+              >
               <a
                 href="/contact"
                 class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
@@ -175,7 +180,7 @@
             >
               <a
                 href="/team"
-                class="text-base font-medium text-white hover:text-white"
+                class="text-base font-medium text-gray-300 hover:text-white"
                 >Team</a
               >
               <button
@@ -202,22 +207,22 @@
             <div id="mobile-team-submenu" class="ml-6 space-y-1 hidden">
               <a
                 href="/anthony-comer"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
+                class="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                 >Anthony Comer</a
               >
               <a
                 href="/zach-miller"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
+                class="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                 >Zach Miller</a
               >
               <a
                 href="/pratibha-bhandari"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
+                class="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                 >Pratibha Bhandari</a
               >
               <a
                 href="/lauren-weil"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
+                class="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                 >Lauren Weil</a
               >
             </div>
@@ -230,7 +235,7 @@
             >
               <a
                 href="/projects"
-                class="text-base font-medium text-white hover:text-white"
+                class="text-base font-medium text-gray-300 hover:text-white"
                 >Projects</a
               >
               <button
@@ -257,17 +262,17 @@
             <div id="mobile-projects-submenu" class="ml-6 space-y-1 hidden">
               <a
                 href="/ctol-testing"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
+                class="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                 >CTOL Flight Test Validation</a
               >
               <a
                 href="/s2f-x200-lift"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
+                class="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                 >Multi Purpose Response Drone Development</a
               >
               <a
                 href="/tilt-wing-vtol"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
+                class="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                 >Active Flow Control for Tiltwing VTOL</a
               >
             </div>
@@ -275,17 +280,12 @@
 
           <a
             href="/publications"
-            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >Publications</a
           >
-            <a
-                href="/about"
-                class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
-                >About</a
-              >
           <a
             href="/contact"
-            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >Contact</a
           >
         </div>
@@ -293,94 +293,110 @@
     </nav>
 
     <script>
-      const menuToggle = document.querySelector(
-        'button[aria-controls="mobile-menu"]'
-      );
-      const mobileMenu = document.getElementById("mobile-menu");
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(
+          'button[aria-controls="mobile-menu"]'
+        );
+        const mobileMenu = document.getElementById("mobile-menu");
 
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
 
-        // Swap icons
-        const icons = menuToggle.querySelectorAll("svg");
-        icons.forEach((icon) => icon.classList.toggle("hidden"));
+          // Swap icons
+          const icons = menuToggle.querySelectorAll("svg");
+          icons.forEach((icon) => icon.classList.toggle("hidden"));
+        });
       });
     </script>
 
-    <section class="relative bg-gray-300 lg:px-24 px-4 pt-32 pb-20">
-      <div class="container mx-auto">
-        <div class="flex">
-          <div class="mb-6 px-8 md:w-2/5">
-            <a
-              href="/team"
-              class="inline-block font-semibold text-xl hover:text-gray-600"
-            >
-              ← Back
-            </a>
+    <section class="relative h-[50vh] w-full">
+      <!-- Hero Image -->
+      <img
+        src="img/about-s2far.jpg"
+        alt="Hero Banner"
+        class="absolute inset-0 h-full w-full object-cover object-top"
+      />
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+      <!-- Hero Content -->
+      <div class="relative lg:px-24 pt-32 pb-20 px-4 h-full">
+        <div class="container mx-auto h-full">
+          <div
+            class="relative z-10 flex h-full items-center px-4 lg:flex-row flex-col"
+          >
+            <div class="max-w-lg lg:w-1/2">
+              <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">
+                About S2FAR
+              </h1>
+              <p class="text-lg text-gray-200">About</p>
+            </div>
           </div>
         </div>
-        <div class="flex flex-wrap">
-          <div class="order-2 w-full text-black md:order-2 md:w-2/3">
-            <h1 class="text-5xl font-bold">Pratibha Bhandari</h1>
-            <p class="mt-2 text-xl">PhD Student</p>
+      </div>
+    </section>
 
-            <div class="mt-5 align-center gap-x-3 flex">
-              <a
-                href="mailto:pratibha.bhandari@okstate.edu"
-                class="transition-transform duration-300 ease-in-out hover:-translate-y-1"
-                ><img
-                  style="height: 35px; width: auto"
-                  src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png"
-              /></a>
-              <a
-                href="https://www.linkedin.com/in/b-pratibha"
-                target="_blank"
-                class="transition-transform duration-300 ease-in-out hover:-translate-y-1"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png"
-                  style="height: 35px; width: auto"
-                  alt="LinkedIn"
-                  
-                />
-              </a>
-              <a
-                href="https://www.researchgate.net/profile/Pratibha-Bhandari-2"
-                target="_blank"
-                class="transition-transform duration-300 ease-in-out hover:-translate-y-1"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/ResearchGate_icon_SVG.svg/2048px-ResearchGate_icon_SVG.svg.png"
-                  style="height: 35px; width: auto"
-                  alt="ResearchGate"
-                />
-              </a>
-            </div>
+    <section class="relative bg-gray-300  px-4 pt-16 pb-20">
+      <div class="container mx-auto">
+        <!-- About S2FAR Section -->
+        <div
+          class="flex flex-col md:flex-row md:items-center gap-8 px-4 "
+        >
+          <!-- Image -->
+          <div class="md:w-1/2 text-black">
+            <img
+              src="img/S2FAR.png"
+              alt="S2FAR logo"
+              class="w-full max-w-md mx-auto"
+            />
+          </div>
 
-            <div class="mt-5">
-              <h2 class="font-bold text-2xl">About</h2>
-            </div>
-            <p class="mt-2 leading-relaxed max-w-prose">
-              Pratibha Bhandari is pursuing her PhD degree in Oklahoma State
-              University’s Simulation to Flight Applied Research Lab (S2FAR).
-              Her research interests lie at the intersection of aerospace
-              systems design, flight dynamics and control, and urban air
-              mobility. She aims to contribute to scalable, certifiable UAM
-              vehicle designs that balance performance and operational safety.
-              She received a Bachelor's degree in Aerospace Engineering from
-              Tribhuvan University, Nepal. As a researcher in Nepal, she worked
-              in aircraft modeling, performance analysis, and path planning for
-              safe flight operations in near-terrain environments.
+          <!-- Text -->
+          <div class="md:w-1/2 text-black">
+            <h2 class="text-3xl sm:text-4xl font-bold pb-4">About S2FAR</h2>
+            <p class="text-base sm:text-lg leading-relaxed">
+              Oklahoma State University (OSU) is a leading R1-classified
+              research institution, serving over 25,000 students at its main
+              campus in Stillwater and the growing Tulsa Campus. Conveniently
+              located near downtown Tulsa, OSU-Tulsa connects academic
+              excellence with industry partnerships in the region. The School of
+              Mechanical and Aerospace Engineering (MAE) at OSU is home to
+              advanced facilities such as the LaunchPad Center for Advanced Air
+              Mobility and the Counter-UAS Center of Excellence, supporting
+              pioneering research in unmanned aerial systems, flight dynamics,
+              and VTOL technologies. The Simulation to Flight Applied Research
+              (S2FAR) Laboratory is located at OSU’s Tulsa campus in the
+              Helmerich Research Center.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skyway Range Section -->
+        <div
+          class="flex flex-col-reverse md:flex-row items-center gap-8 px-4 mt-24"
+        >
+          <!-- Text (left on desktop) -->
+          <div class="md:w-1/2 text-black">
+            <h2 class="text-3xl sm:text-4xl font-bold pb-4">Skyway Range</h2>
+            <p class="text-base sm:text-lg leading-relaxed">
+              The Skyway Range, developed in collaboration with OSU’s Oklahoma
+              Aerospace Institute for Research and Education (OAIRE), Osage LLC,
+              and Tulsa Innovation Labs, delivers an unmatched environment for
+              the research, development, and testing of unmanned and advanced
+              air mobility systems. With a 114-nautical-mile flight corridor
+              encircling over 1,200 square miles of mixed urban and rural
+              terrain, Skyway offers exceptional flexibility and scale for
+              cutting-edge flight testing.
             </p>
           </div>
 
-          <div
-            class="order-1 w-full flex justify-center md:order-1 md:w-1/3 md:justify-start px-8 mb-5"
-          >
+          <!-- Image (right on desktop, top on mobile) -->
+          <div class="md:w-1/2 text-black">
             <img
-              class="object-contain shadow-md rounded-lg h-96 md:h-auto md:w-96"
-              src="img/Pratibha-Bhandari.jpg"
-              alt=""
+              src="img/OSU-Skyway-Range.jpg"
+              alt="Skyway Range"
+              class="w-full pl-8 mx-auto"
             />
           </div>
         </div>
