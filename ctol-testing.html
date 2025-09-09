@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body class="bg-gray-300">
-   <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
+    <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
       <div class="container mx-auto px-4">
         <div class="flex h-16 items-center justify-between relative">
           <!-- Logo -->
@@ -116,7 +116,7 @@
                 class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
                 >Publications</a
               >
-                <a
+              <a
                 href="/about"
                 class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
                 >About</a
@@ -283,7 +283,7 @@
             class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
             >Publications</a
           >
-            <a
+          <a
             href="/about"
             class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
             >About</a
@@ -318,9 +318,21 @@
           <div class="mb-6 md:w-2/5">
             <a
               href="/projects"
-              class="inline-block font-semibold text-xl hover:text-gray-600"
+              class="inline-flex items-center gap-2 font-semibold text-xl hover:text-gray-600"
             >
-              ← Back
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Back
             </a>
           </div>
         </div>
@@ -344,7 +356,7 @@
               same control architecture proven on multiple VTOL configurations.
             </p>
           </div>
-          <div class="w-full  md:w-1/2 order-1 md:order-2 sm:mb-5">
+          <div class="w-full md:w-1/2 order-1 md:order-2 sm:mb-5">
             <div class="flex justify-center">
               <img
                 class="h-48"
@@ -388,46 +400,45 @@
       </div>
     </section>
   </body>
-   <footer class="bg-gray-800 text-white mt-16">
-      <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-          <!-- Branding + Icons + Copyright -->
-          <div>
-            <div class="flex items-center space-x-3 mb-4">
-              <img
-                src="img/S2FAR_Plane_Transparent_Gray.png"
-                alt="S2FAR logo"
-                class="h-8 w-auto"
-              />
-              <h3 class="text-lg font-semibold tracking-wide">
-                S2FAR Laboratory
-              </h3>
-            </div>
-
-            <p class="text-xs text-white">
-              &copy; 2025 Simulation to Flight Applied Research Laboratory. All
-              rights reserved.
-            </p>
+  <footer class="bg-gray-800 text-white mt-16">
+    <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <!-- Branding + Icons + Copyright -->
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <img
+              src="img/S2FAR_Plane_Transparent_Gray.png"
+              alt="S2FAR logo"
+              class="h-8 w-auto"
+            />
+            <h3 class="text-lg font-semibold tracking-wide">
+              S2FAR Laboratory
+            </h3>
           </div>
 
-       
-          <div>
-            <h4 class="text-sm font-semibold uppercase mb-4 tracking-wider">
-              Explore
-            </h4>
-            <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-              <li><a href="/team" class="hover:underline">Team</a></li>
-              <li><a href="/projects" class="hover:underline">Projects</a></li>
-              <li>
-                <a href="/publications" class="hover:underline">Publications</a>
-              </li>
-              <li>
-                <a href="/about" class="hover:underline">About</a>
-              </li>
-              <li><a href="/contact" class="hover:underline">Contact</a></li>
-            </ul>
-          </div>
+          <p class="text-xs text-white">
+            &copy; 2025 Simulation to Flight Applied Research Laboratory. All
+            rights reserved.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold uppercase mb-4 tracking-wider">
+            Explore
+          </h4>
+          <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <li><a href="/team" class="hover:underline">Team</a></li>
+            <li><a href="/projects" class="hover:underline">Projects</a></li>
+            <li>
+              <a href="/publications" class="hover:underline">Publications</a>
+            </li>
+            <li>
+              <a href="/about" class="hover:underline">About</a>
+            </li>
+            <li><a href="/contact" class="hover:underline">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 </html>
