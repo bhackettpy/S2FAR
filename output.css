@@ -664,3 +664,17 @@ section {
 html {
   scroll-behavior: smooth;
 }
+.text-link {
+text-decoration: underline;
+  text-decoration-color: #1e3a8a; /* Tailwind's text-blue-900 */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  color: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.text-link:hover {
+   
+ color: #1e3a8a; 
+}
+
