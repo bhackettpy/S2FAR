@@ -38,7 +38,6 @@
                 >
                   Team
                 </a>
-             
               </div>
 
               <!-- Projects dropdown -->
@@ -171,7 +170,6 @@
                 </svg>
               </button>
             </div>
-         
           </div>
 
           <!-- Projects mobile dropdown -->
@@ -183,43 +181,6 @@
                 href="/projects"
                 class="text-base font-medium text-white hover:text-white"
                 >Projects</a
-              >
-              <button
-                type="button"
-                class="text-gray-400 hover:text-white focus:outline-none"
-                onclick="document.getElementById('mobile-projects-submenu').classList.toggle('hidden')"
-                aria-label="Toggle Projects submenu"
-              >
-                <svg
-                  class="size-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div id="mobile-projects-submenu" class="ml-6 space-y-1 hidden">
-              <a
-                href="/ctol-testing"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
-                >CTOL Flight Test Validation</a
-              >
-              <a
-                href="/s2f-x200-lift"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
-                >Multi Purpose Response Drone Development</a
-              >
-              <a
-                href="/tilt-wing-vtol"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
-                >Active Flow Control for Tiltwing VTOL</a
               >
             </div>
           </div>
@@ -258,129 +219,68 @@
       });
     </script>
 
-    <section class="relative h-[50vh] w-full">
-      <!-- Hero Image -->
-      <img
-        src="img/skyway.jpg"
-        alt="Hero Banner"
-        class="absolute inset-0 h-full w-full object-cover object-top"
-      />
-
-      <!-- Dark Overlay -->
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      <!-- Hero Content -->
-      <div class="relative lg:px-24 pt-32 pb-20 px-4 h-full">
-        <div class="container mx-auto h-full">
-          <div class="relative z-10 flex h-full items-center justify-start px-4">
-
-            <div class="max-w-lg lg:w-1/2">
-              <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">
-                Contact S2FAR
-              </h1>
-              <p class="text-lg text-gray-200">Let's get started</p>
-            </div>
+    <section class="relative bg-gray-300 lg:px-24 px-4 pt-32 pb-32">
+      <div class="container mx-auto">
+        <div class="flex">
+          <div class="mb-6 px-8 md:w-2/5">
+            <a
+              href="/team"
+              class="inline-block font-semibold text-xl hover:text-gray-600"
+            >
+              ← Back
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="flex flex-wrap">
+          <div class="order-2 w-full text-black md:order-2 md:w-2/3">
+            <h1 class="text-5xl font-bold">Tony Chappell</h1>
+            <p class="mt-2 text-xl">PhD Student</p>
 
-    <section class="relative bg-gray-300 lg:px-24 px-4 pt-16 md:pb-20 pb-0">
-      <div class="container mx-auto">
-        <div class="flex flex-wrap flex-row">
-          <div
-            id="contact"
-            class="flex flex-col md:flex-row py-12 space-y-8 md:space-y-0 md:space-x-10 justify-center"
-          >
-            <!-- 💼 Unified S2FAR Contact Panel -->
-            <div class="bg-gray-100 rounded-lg shadow-lg p-6">
-              <form
-                action="https://formspree.io/f/mgvzkbry"
-                method="POST"
-                class="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0"
+            <div class="mt-5 align-center gap-x-3 flex">
+              <a
+                href="mailto:antoniochappell@protonmail.com"
+                class="transition-transform duration-300 ease-in-out hover:-translate-y-1"
+                ><img
+                  style="height: 35px; width: auto"
+                  src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/antoniochappell/"
+                target="_blank"
+                class="transition-transform duration-300 ease-in-out hover:-translate-y-1"
               >
-                <!-- 📝 Left Panel -->
-                <div class="md:w-1/2 flex flex-col justify-between space-y-6">
-                  <!-- Inline Heading and Logo -->
-                  <div
-                    class="flex flex-col items-center md:flex-row md:items-center md:space-x-4 space-y-4 md:space-y-0"
-                  >
-                    <h2 class="text-4xl font-bold text-gray-800">
-                      Partner With S2FAR
-                    </h2>
-                    <img
-                      src="img/S2FAR_Plane_Transparent_Gray.png"
-                      alt="S2FAR Logo"
-                      class="w-32 h-auto object-contain"
-                    />
-                  </div>
-
-                  <!-- Description -->
-                  <p class="text-lg text-gray-600">
-                    Whether you're a small business exploring UAS solutions or a
-                    university seeking research collaboration, S2FAR is happy to
-                    discuss ways we can work with you. We will get back to you
-                    as soon as possible!
-                  </p>
-
-                  <!-- Form Fields -->
-                  <div class="space-y-4">
-                    <div>
-                      <label
-                        for="email"
-                        class="block text-sm font-medium text-gray-700"
-                      >
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        required
-                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        for="message"
-                        class="block text-sm font-medium text-gray-700"
-                      >
-                        Comments / Questions
-                      </label>
-                      <textarea
-                        name="message"
-                        id="message"
-                        rows="4"
-                        required
-                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
-                      ></textarea>
-                    </div>
-
-                    <div>
-                      <button
-                        type="submit"
-                        class="w-full bg-gray-900 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 🗺️ Right Panel: Map Matching Height -->
-                <div class="md:w-1/2 flex">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.620900060159!2d-95.99132949999999!3d36.163296300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b6eb848a31d5bf%3A0xe57f3d16fdc9b3df!2sHelmerich%20Research%20Center%20at%20OSU-Tulsa!5e1!3m2!1sen!2sus!4v1753594432473!5m2!1sen!2sus"
-                    class="w-full rounded-lg shadow-md"
-                    style="border: 0; min-height: 100%; aspect-ratio: 4/3"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </form>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png"
+                  style="height: 35px; width: auto"
+                  alt="LinkedIn"
+                />
+              </a>
             </div>
+
+            <div class="mt-5">
+              <h2 class="font-bold text-2xl">About</h2>
+            </div>
+            <p class="mt-2 leading-relaxed max-w-prose">
+              Born in Fayetteville, AR, Antonio grew up in Norman, OK from the
+              age of 4. He obtained his bachelor's degree in Mechanical
+              Engineering at the University of Oklahoma. Antonio joined the
+              Simulation to Flight Applied Research (S2FAR) Laboratory to pursue
+              his interest in the design and control of unmanned aerial vehicles
+              (UAVs). He is pursuing a Ph.D. with the intention of becoming a
+              professor. He is passionate about engineering education, research,
+              and competition and design teams. His hobbies include running,
+              hiking, weight lifting, and climbing.
+            </p>
+          </div>
+
+          <div
+            class="order-1 w-full flex justify-center md:order-1 md:w-1/3 md:justify-start px-8 mb-5"
+          >
+            <img
+              class="object-contain shadow-md rounded-lg h-96 md:h-auto md:w-96"
+              src="img/Tony Chappell Bio.png"
+              alt="Tony Chappell"
+            />
           </div>
         </div>
       </div>
