@@ -704,9 +704,10 @@ h2::after {
   border-radius: 2px;
 }
 
-.pretty {
-  text-wrap: pretty;
-  display: block;
-}
+ .text-pretty {
+        text-wrap: pretty;
+        overflow-wrap: anywhere;
+
+    }
 
 
