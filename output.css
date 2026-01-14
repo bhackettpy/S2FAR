@@ -678,3 +678,35 @@ text-decoration: underline;
  color: #1e3a8a; 
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.balance {
+  text-wrap: balance;
+}
+
+h2 {
+  position: relative;
+  padding-bottom: 1rem;
+  
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 6rem;
+  height: 0.3rem;
+  background-color: #1F2937; /* Tailwind gray-800 */
+  border-radius: 2px;
+}
+
+.pretty {
+  text-wrap: pretty;
+  display: block;
+}
+
+

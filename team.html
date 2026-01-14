@@ -30,52 +30,19 @@
           <!-- Desktop nav -->
           <div class="flex-1 justify-center hidden sm:flex">
             <div class="flex space-x-4 items-center">
-              <!-- Team dropdown -->
-              <div class="relative group">
-                <a
-                  href="/team"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
-                >
-                  Team
-                </a>
-              </div>
+              <a
+                href="/team"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
+              >
+                Team
+              </a>
 
-              <!-- Projects dropdown -->
-              <div class="relative group">
-                <a
-                  href="/projects"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
-                >
-                  Projects
-                </a>
-                <div
-                  class="absolute left-0 top-full mt-1 w-64 rounded-md bg-gray-700 shadow-lg hidden group-hover:block z-50"
-                >
-                  <ul class="py-1 text-sm text-gray-200">
-                    <li>
-                      <a
-                        href="/ctol-testing"
-                        class="block px-4 py-2 hover:bg-gray-600"
-                        >CTOL Flight Test Validation</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/s2f-x200-lift"
-                        class="block px-4 py-2 hover:bg-gray-600"
-                        >Multi Purpose Response Drone Development</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/tilt-wing-vtol"
-                        class="block px-4 py-2 hover:bg-gray-600"
-                        >Active Flow Control for Tiltwing VTOL</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <a
+                href="/projects"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
+              >
+                Projects
+              </a>
 
               <a
                 href="/publications"
@@ -87,7 +54,6 @@
                 class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
                 >About</a
               >
-
               <a
                 href="/contact"
                 class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
@@ -101,7 +67,7 @@
             <button
               type="button"
               id="mobile-menu-toggle"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -140,88 +106,17 @@
       <!-- Mobile menu -->
       <div class="sm:hidden hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Team mobile dropdown -->
-          <div class="rounded-md">
-            <div
-              class="flex items-center justify-between px-3 py-2 hover:bg-gray-700 rounded-md"
-            >
-              <a
-                href="/team"
-                class="text-base font-medium text-white hover:text-white"
-                >Team</a
-              >
-              <button
-                type="button"
-                class="text-gray-400 hover:text-white focus:outline-none"
-                onclick="document.getElementById('mobile-team-submenu').classList.toggle('hidden')"
-                aria-label="Toggle Team submenu"
-              >
-                <svg
-                  class="size-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+          <a
+            href="/team"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Team</a
+          >
 
-          <!-- Projects mobile dropdown -->
-          <div class="rounded-md">
-            <div
-              class="flex items-center justify-between px-3 py-2 hover:bg-gray-700 rounded-md"
-            >
-              <a
-                href="/projects"
-                class="text-base font-medium text-white hover:text-white"
-                >Projects</a
-              >
-              <button
-                type="button"
-                class="text-gray-400 hover:text-white focus:outline-none"
-                onclick="document.getElementById('mobile-projects-submenu').classList.toggle('hidden')"
-                aria-label="Toggle Projects submenu"
-              >
-                <svg
-                  class="size-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div id="mobile-projects-submenu" class="ml-6 space-y-1 hidden">
-              <a
-                href="/ctol-testing"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
-                >CTOL Flight Test Validation</a
-              >
-              <a
-                href="/s2f-x200-lift"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
-                >Multi Purpose Response Drone Development</a
-              >
-              <a
-                href="/tilt-wing-vtol"
-                class="block px-3 py-2 text-sm text-white hover:bg-gray-700 hover:text-white"
-                >Active Flow Control for Tiltwing VTOL</a
-              >
-            </div>
-          </div>
+          <a
+            href="/projects"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Projects</a
+          >
 
           <a
             href="/publications"
@@ -280,7 +175,7 @@
               <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4">
                 S2FAR Team
               </h1>
-              <p class="text-lg text-gray-200">
+              <p class="text-lg text-white font-semibold">
                 Advancing autonomous flight through research and innovation
               </p>
             </div>
@@ -294,7 +189,7 @@
         <div class="flex flex-wrap flex-col">
           <!-- Director Section -->
           <div class="mb-10 w-full text-black">
-            <h2 class="text-4xl font-bold">Director</h2>
+            <h2 class="text-4xl font-bold">Lab Director</h2>
           </div>
 
           <div
@@ -312,15 +207,17 @@
                   />
                 </div>
                 <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">Anthony Comer</h2>
-                  <p class="mb-2 text-gray-600">Assistant Professor</p>
+                  <h3 class="text-xl font-bold text-gray-800">Anthony Comer</h3>
+                  <p class="mb-2 mt-1 text-gray-600 text-md font-bold">
+                    Assistant Professor
+                  </p>
                 </div>
               </div>
             </a>
           </div>
 
           <!-- Graduate Students Section -->
-          <div class="mt-20 mb-10 w-full text-black">
+          <div class="mt-24 mb-10 w-full text-black">
             <h2 class="text-4xl font-bold">Graduate Students</h2>
           </div>
 
@@ -340,15 +237,17 @@
                   />
                 </div>
                 <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">
+                  <h3 class="text-xl font-bold text-gray-800">
                     Pratibha Bhandari
-                  </h2>
-                  <p class="mb-2 text-gray-600">Ph.D. Student</p>
+                  </h3>
+                  <p class="mb-2 mt-1 text-gray-600 text-md font-bold">
+                    Ph.D. Student
+                  </p>
                 </div>
               </div>
             </a>
 
-             <!-- Tony Chappell -->
+            <!-- Tony Chappell -->
             <a href="tony-chappell">
               <div
                 class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
@@ -361,10 +260,10 @@
                   />
                 </div>
                 <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    Tony Chappell
-                  </h2>
-                  <p class="mb-2 text-gray-600">Ph.D. Student</p>
+                  <h3 class="text-xl font-bold text-gray-800">Tony Chappell</h3>
+                  <p class="mb-2 mt-1 text-gray-600 text-md font-bold">
+                    Ph.D. Student
+                  </p>
                 </div>
               </div>
             </a>
@@ -382,67 +281,23 @@
                   />
                 </div>
                 <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">Zach Atkinson</h2>
-                  <p class="mb-2 text-gray-600">M.S. Student</p>
+                  <h3 class="text-xl font-bold text-gray-800">Zach Atkinson</h3>
+                  <p class="mb-2 mt-1 text-gray-600 text-md font-bold">
+                    M.S. Student
+                  </p>
                 </div>
               </div>
             </a>
+          </div>
 
-         </div>
-
-
-           <!-- Undergraduate Students Section -->
-          <div class="mt-20 mb-10 w-full text-black">
+          <!-- Undergraduate Students Section -->
+          <div class="mt-24 mb-10 w-full text-black">
             <h2 class="text-4xl font-bold">Undergraduate Students</h2>
           </div>
           <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
           >
-             <!-- Daniela Durango -->
-            <a href="daniela-durango">
-              <div
-                class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
-              >
-                <div class="w-full overflow-hidden rounded-t-lg">
-                  <img
-                    class="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                    src="img/Daniela-Durango.jpg"
-                    alt="Daniela Durango"
-                  />
-                </div>
-                <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    Daniela Durango
-                  </h2>
-                  <p class="mb-2 text-gray-600">Sophomore</p>
-                </div>
-              </div>
-            </a>
-
-
-              <!-- Juan Gandara -->
-            <a href="juan-gandara">
-              <div
-                class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
-              >
-                <div class="w-full overflow-hidden rounded-t-lg">
-                  <img
-                    class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
-                    src="img/juan-gandara.jpg"
-                    alt="Juan Gandara"
-                  />
-                </div>
-                <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    Juan Gandara
-                  </h2>
-                  <p class="mb-2 text-gray-600">Senior</p>
-                </div>
-              </div>
-            </a>
-         
-
-              <!-- Jamie Lam -->
+            <!-- Jamie Lam -->
             <a href="juan-gandara">
               <div
                 class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
@@ -455,62 +310,66 @@
                   />
                 </div>
                 <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">
-                    Jamie Lam
-                  </h2>
-                  <p class="mb-2 text-gray-600">Senior</p>
+                  <h3 class="text-xl font-bold text-gray-800">Jamie Lam</h3>
+                  <p class="mb-2 mt-1 text-gray-600 text-md font-bold">
+                    Senior
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Juan Gandara -->
+            <a href="juan-gandara">
+              <div
+                class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
+              >
+                <div class="w-full overflow-hidden rounded-t-lg">
+                  <img
+                    class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                    src="img/juan-gandara.jpg"
+                    alt="Juan Gandara"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-xl font-bold text-gray-800">Juan Gandara</h3>
+                  <p class="mb-2 mt-1 text-gray-600 text-md font-bold">
+                    Senior
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Daniela Durango -->
+            <a href="daniela-durango">
+              <div
+                class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
+              >
+                <div class="w-full overflow-hidden rounded-t-lg">
+                  <img
+                    class="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                    src="img/Daniela-Durango.jpg"
+                    alt="Daniela Durango"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-xl font-bold text-gray-800">
+                    Daniela Durango
+                  </h3>
+                  <p class="mb-2 mt-1 text-gray-600 text-md font-bold">
+                    Sophomore
+                  </p>
                 </div>
               </div>
             </a>
           </div>
 
-
-
-          <div class="mt-20 mb-10 w-full text-black">
+          <div class="mt-24 mb-10 w-full text-black">
             <h2 class="text-4xl font-bold">Former Students</h2>
           </div>
 
           <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
           >
-            <!-- Zach Miller -->
-            <a href="https://www.linkedin.com/in/zachary-miller-9656b0169" target="_blank">
-              <div
-                class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
-              >
-                <div class="w-full overflow-hidden rounded-t-lg">
-                  <img
-                    class="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                    src="img/Zach-Miller.jpg"
-                    alt="Zach Miller"
-                  />
-                </div>
-                <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">Zach Miller</h2>
-                  <p class="mb-2 text-gray-600 leading-tight">Aircraft Maintenance Programs Engineer at Airbus</p>
-                </div>
-              </div>
-            </a>
-
-            <!-- Eli Harp -->
-            <a href="https://www.linkedin.com/in/elijah-harp-a92b58261" target="_blank">
-              <div
-                class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
-              >
-                <div class="w-full overflow-hidden rounded-t-lg">
-                  <img
-                    class="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
-                    src="img/eli-harp.jpg"
-                    alt="Eli Harp"
-                  />
-                </div>
-                <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">Eli Harp</h2>
-                  <p class="mb-2 text-gray-600 leading-tight"></p>
-                </div>
-              </div>
-            </a>
-
             <!-- Lauren Weil -->
             <a href="https://www.linkedin.com/in/lauren-k-weil" target="_blank">
               <div
@@ -524,8 +383,61 @@
                   />
                 </div>
                 <div class="p-4">
-                  <h2 class="text-xl font-bold text-gray-800">Lauren Weil</h2>
-                  <p class="mb-2 text-gray-600 leading-tight">Aerospace Engineering Student at Georgia Institute of Technology</p>
+                  <h3 class="text-xl font-bold text-gray-800">Lauren Weil</h3>
+                  <p
+                    class="mb-2 mt-1 text-gray-600 text-md font-bold leading-tight pretty"
+                  >
+                    Aerospace Engineering Student at The Georgia Institute of
+                    Technology
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Zach Miller -->
+            <a
+              href="https://www.linkedin.com/in/zachary-miller-9656b0169"
+              target="_blank"
+            >
+              <div
+                class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
+              >
+                <div class="w-full overflow-hidden rounded-t-lg">
+                  <img
+                    class="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                    src="img/Zach-Miller.jpg"
+                    alt="Zach Miller"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-xl font-bold text-gray-800">Zach Miller</h3>
+                  <p
+                    class="mb-2 mt-1 text-gray-600 text-md font-bold leading-tight"
+                  >
+                    Aircraft Maintenance Programs Engineer at Airbus
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Eli Harp -->
+            <a
+              href="https://www.linkedin.com/in/elijah-harp-a92b58261"
+              target="_blank"
+            >
+              <div
+                class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
+              >
+                <div class="w-full overflow-hidden rounded-t-lg">
+                  <img
+                    class="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                    src="img/eli-harp.jpg"
+                    alt="Eli Harp"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-xl font-bold text-gray-800">Eli Harp</h3>
+                  <p class="mb-2 text-gray-600 leading-tight"></p>
                 </div>
               </div>
             </a>
