@@ -376,71 +376,72 @@
         </div>
       </div>
     </section>
-    <!-- Modal Background -->
-    <div
-      id="videoModal"
-      class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden"
+
+    <!-- Video Modal -->
+<div
+  id="videoModal"
+  class="fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50 hidden"
+>
+  <div class="bg-white rounded-xl shadow-xl w-11/12 md:w-3/4 lg:w-1/2 p-4 relative">
+
+    <!-- Close Button -->
+    <button
+      id="closeVideoModal"
+      class="absolute top-3 right-3 text-gray-600 hover:text-black text-2xl"
     >
-      <!-- Modal Content -->
-      <div
-        class="bg-white rounded-xl shadow-xl w-11/12 md:w-3/4 lg:w-1/2 p-4 relative"
-      >
-        <!-- Close Button -->
-        <button
-          id="closeVideoModal"
-          class="absolute top-3 right-3 text-gray-600 hover:text-black text-2xl"
-        >
-          &times;
-        </button>
+      &times;
+    </button>
 
-        <!-- Video Container -->
-        <div class="aspect-video w-full rounded-lg overflow-hidden">
-          <iframe
-            id="modalVideo"
-            class="w-full h-full"
-            src=""
-            title="YouTube video player"
-            frameborder="0"
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-              web-share;
-            "
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
+    <!-- Video Container -->
+    <div class="aspect-video w-full rounded-lg overflow-hidden">
+      <iframe
+        id="modalVideo"
+        class="w-full h-full"
+        src=""
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
     </div>
-    <script>
-      const videoCards = document.querySelectorAll(".video-card");
-      const videoModal = document.getElementById("videoModal");
-      const modalVideo = document.getElementById("modalVideo");
-      const closeVideoModal = document.getElementById("closeVideoModal");
 
-      videoCards.forEach((card) => {
-        card.addEventListener("click", () => {
-          const videoURL = card.getAttribute("data-video");
-          modalVideo.src = videoURL;
-          videoModal.classList.remove("hidden");
-        });
-      });
+  </div>
+</div>
 
-      closeVideoModal.addEventListener("click", () => {
-        videoModal.classList.add("hidden");
-        modalVideo.src = "";
-      });
 
-      videoModal.addEventListener("click", (e) => {
-        if (e.target === videoModal) {
-          videoModal.classList.add("hidden");
-          modalVideo.src = "";
-        }
-      });
-    </script>
+
+  <script>
+  const videoCards = document.querySelectorAll(".video-card");
+  const videoModal = document.getElementById("videoModal");
+  const modalVideo = document.getElementById("modalVideo");
+  const closeVideoModal = document.getElementById("closeVideoModal");
+
+  // Open modal
+  videoCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const videoURL = card.getAttribute("data-video");
+      modalVideo.src = videoURL;
+
+      videoModal.classList.remove("hidden");
+      videoModal.classList.add("flex");
+    });
+  });
+
+  // Close modal (button)
+  closeVideoModal.addEventListener("click", () => {
+    videoModal.classList.add("hidden");
+    videoModal.classList.remove("flex");
+    modalVideo.src = "";
+  });
+
+  // Close modal (click outside)
+  videoModal.addEventListener("click", (e) => {
+    if (e.target === videoModal) {
+      videoModal.classList.add("hidden");
+      videoModal.classList.remove("flex");
+      modalVideo.src = "";
+    }
+  });
+</script>
+
 
     <script>
       const mainImage = document.getElementById("mainImage");
