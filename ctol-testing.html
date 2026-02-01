@@ -150,6 +150,79 @@
       });
     </script>
 
+    <div class="pt-16">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="container mx-auto px-4 mt-4">
+        <ol class="flex items-center space-x-2 text-sm text-gray-700">
+          <!-- Home Icon -->
+          <li>
+            <a href="/" class="hover:text-gray-900 flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h4a1 1 0 001-1v-4h4v4a1 1 0 001 1h4a1 1 0 001-1V10"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <!-- Chevron Divider -->
+          <li class="text-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-3 h-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </li>
+
+          <!-- Section -->
+          <li>
+            <a href="/projects" class="hover:text-gray-900">Projects</a>
+          </li>
+
+          <!-- Chevron Divider -->
+          <li class="text-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-3 h-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </li>
+
+          <!-- Current Page -->
+          <li class="text-gray-900 font-medium truncate max-w-[60vw]">
+            Conventional Takeoff and Landing
+          </li>
+        </ol>
+      </nav>
+    </div>
+
     <section class="relative bg-gray-300 lg:px-24 px-4 pt-32 pb-20">
       <div class="container mx-auto">
         <div class="flex">
@@ -275,9 +348,9 @@
             <div class="md:w-1/4 w-full flex">
               <div
                 data-video="https://www.youtube.com/embed/-xZOJu5ragE?autoplay=1"
-                class="video-card flex flex-col flex-1 cursor-pointer bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 group transform transition duration-300 hover:shadow-xl"
+                class="video-card flex flex-col flex-1 cursor-pointer rounded-xl p-3 bg-gray-300/40 transition duration-300 hover:bg-gray-300/60 hover:shadow-lg group"
               >
-                <div class="relative overflow-hidden">
+                <div class="relative overflow-hidden rounded-md">
                   <img
                     src="https://img.youtube.com/vi/-xZOJu5ragE/hqdefault.jpg"
                     class="w-full h-auto transform group-hover:scale-105 transition duration-300"
@@ -301,17 +374,10 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="p-5 flex flex-col flex-grow">
-                  <h3 class="text-xl font-bold relative inline-block">
-                    <span class="title-underline"
-                      >CTOL Flight Test Overview</span
-                    >
+                <div class="mt-3 flex flex-col flex-grow">
+                  <h3 class="text-lg font-semibold leading-tight">
+                    CTOL Flight Test Overview
                   </h3>
-                  <p class="text-gray-600 mt-2 flex-grow">
-                    A demonstration of the CTOL trajectory control system during
-                    subscale flight testing.
-                  </p>
                 </div>
               </div>
             </div>
@@ -320,9 +386,9 @@
             <div class="md:w-1/4 w-full flex">
               <div
                 data-video="https://www.youtube.com/embed/BrPrPOOb0dM?autoplay=1"
-                class="video-card flex flex-col flex-1 cursor-pointer bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 group transform transition duration-300 hover:shadow-xl"
+                class="video-card flex flex-col flex-1 cursor-pointer rounded-xl p-3 bg-gray-300/40 transition duration-300 hover:bg-gray-300/60 hover:shadow-lg group"
               >
-                <div class="relative overflow-hidden">
+                <div class="relative overflow-hidden rounded-md">
                   <img
                     src="https://img.youtube.com/vi/BrPrPOOb0dM/hqdefault.jpg"
                     class="w-full h-auto transform group-hover:scale-105 transition duration-300"
@@ -347,15 +413,10 @@
                   </div>
                 </div>
 
-                <div class="p-5 flex flex-col flex-grow">
-                  <h3 class="text-xl font-bold relative inline-block">
-                    <span class="title-underline"
-                      >S2FAR - C150T Short Takeoff</span
-                    >
+                <div class="mt-3 flex flex-col flex-grow">
+                  <h3 class="text-lg font-semibold leading-tight">
+                    S2FAR – C150T Short Takeoff
                   </h3>
-                  <p class="text-gray-600 mt-2 flex-grow">
-                    The C150T demonstrates an exceptionally short takeoff run, aided by the strong headwinds present during testing.
-                  </p>
                 </div>
               </div>
             </div>
@@ -369,79 +430,213 @@
           </p>
         </div>
         <div id="dataSection" class="mt-12 hidden">
-          <p class="leading-relaxed">
-            <!-- Add your data content here -->
-            Data coming soon...
-          </p>
+          <div class="relative w-full max-w-3xl mx-auto">
+            <!-- Carousel Wrapper -->
+            <div
+              id="dataCarousel"
+              class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
+            >
+              <!-- Slide 1 -->
+              <div
+                class="snap-center flex-shrink-0 w-full flex flex-col items-center p-4"
+              >
+                <img
+                  src="img/CTOL Windy Flight.png"
+                  class="max-h-[80vh] object-contain rounded-lg shadow"
+                />
+                <p class="mt-2 text-sm text-black">Windy Flight</p>
+              </div>
+
+              <!-- Slide 2 -->
+              <div
+                class="snap-center flex-shrink-0 w-full flex flex-col items-center p-4"
+              >
+                <img
+                  src="img/CTOL 14-S Turns Flight.png"
+                  class="max-h-[80vh] object-contain rounded-lg shadow"
+                />
+                <p class="mt-2 text-sm text-black">14-S Turns</p>
+              </div>
+
+              <!-- Slide 3 -->
+              <div
+                class="snap-center flex-shrink-0 w-full flex flex-col items-center p-4"
+              >
+                <img
+                  src="img/CTOL Flight.png"
+                  class="max-h-[80vh] object-contain rounded-lg shadow"
+                />
+                <p class="mt-2 text-sm text-black">CTOL Flight</p>
+              </div>
+            </div>
+
+            <!-- Left Arrow -->
+            <button
+              id="dataPrev"
+              class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow hover:bg-white transition"
+              aria-label="Previous graph"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              id="dataNext"
+              class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow hover:bg-white transition"
+              aria-label="Next graph"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Video Modal -->
-<div
-  id="videoModal"
-  class="fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50 hidden"
->
-  <div class="bg-white rounded-xl shadow-xl w-11/12 md:w-3/4 lg:w-1/2 p-4 relative">
-
-    <!-- Close Button -->
-    <button
-      id="closeVideoModal"
-      class="absolute top-3 right-3 text-gray-600 hover:text-black text-2xl"
+    <div
+      id="videoModal"
+      class="fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50 hidden"
     >
-      &times;
-    </button>
+      <!-- Close Button (moved outside the white box) -->
+      <button
+        id="closeVideoModal"
+        class="absolute top-6 right-6 p-3 rounded-full bg-white/90 backdrop-blur-sm text-gray-900 shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+        aria-label="Close video modal"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
 
-    <!-- Video Container -->
-    <div class="aspect-video w-full rounded-lg overflow-hidden">
-      <iframe
-        id="modalVideo"
-        class="w-full h-full"
-        src=""
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+      <div
+        class="bg-white rounded-xl shadow-xl w-11/12 md:w-3/4 lg:w-1/2 p-4 relative"
+      >
+        <!-- Video Container -->
+        <div class="aspect-video w-full rounded-lg overflow-hidden">
+          <iframe
+            id="modalVideo"
+            class="w-full h-full"
+            src=""
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </div>
 
-  </div>
-</div>
+    <script>
+      const carousel = document.getElementById("dataCarousel");
+      const nextBtn = document.getElementById("dataNext");
+      const prevBtn = document.getElementById("dataPrev");
+      const dot = document.getElementById("scrollDot");
 
+      // Arrow navigation
+      nextBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: carousel.clientWidth, behavior: "smooth" });
+      });
 
+      prevBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: -carousel.clientWidth, behavior: "smooth" });
+      });
 
-  <script>
-  const videoCards = document.querySelectorAll(".video-card");
-  const videoModal = document.getElementById("videoModal");
-  const modalVideo = document.getElementById("modalVideo");
-  const closeVideoModal = document.getElementById("closeVideoModal");
+      // Floating dot update
+      function updateDot() {
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        const percentage = carousel.scrollLeft / maxScroll;
 
-  // Open modal
-  videoCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const videoURL = card.getAttribute("data-video");
-      modalVideo.src = videoURL;
+        // Track width minus dot width
+        const trackWidth = carousel.clientWidth;
+        const dotWidth = dot.offsetWidth;
 
-      videoModal.classList.remove("hidden");
-      videoModal.classList.add("flex");
-    });
-  });
+        const x = percentage * (trackWidth - dotWidth);
 
-  // Close modal (button)
-  closeVideoModal.addEventListener("click", () => {
-    videoModal.classList.add("hidden");
-    videoModal.classList.remove("flex");
-    modalVideo.src = "";
-  });
+        dot.style.left = `${x}px`;
+      }
 
-  // Close modal (click outside)
-  videoModal.addEventListener("click", (e) => {
-    if (e.target === videoModal) {
-      videoModal.classList.add("hidden");
-      videoModal.classList.remove("flex");
-      modalVideo.src = "";
-    }
-  });
-</script>
+      carousel.addEventListener("scroll", updateDot);
+      window.addEventListener("resize", updateDot);
 
+      updateDot();
+    </script>
+
+    <script>
+      const videoCards = document.querySelectorAll(".video-card");
+      const videoModal = document.getElementById("videoModal");
+      const modalVideo = document.getElementById("modalVideo");
+      const closeVideoModal = document.getElementById("closeVideoModal");
+
+      // Open modal
+      videoCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const videoURL = card.getAttribute("data-video");
+          modalVideo.src = videoURL;
+
+          videoModal.classList.remove("hidden");
+          videoModal.classList.add("flex");
+        });
+      });
+
+      // Close modal (button)
+      closeVideoModal.addEventListener("click", () => {
+        videoModal.classList.add("hidden");
+        videoModal.classList.remove("flex");
+        modalVideo.src = "";
+      });
+
+      // Close modal (click outside)
+      videoModal.addEventListener("click", (e) => {
+        if (e.target === videoModal) {
+          videoModal.classList.add("hidden");
+          videoModal.classList.remove("flex");
+          modalVideo.src = "";
+        }
+      });
+    </script>
 
     <script>
       const mainImage = document.getElementById("mainImage");
