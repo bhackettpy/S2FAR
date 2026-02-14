@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body class="bg-gray-300">
-   <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
+    <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
       <div class="container mx-auto px-4">
         <div class="flex h-16 items-center justify-between relative">
           <!-- Logo -->
@@ -140,7 +140,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const menuToggle = document.querySelector(
-          'button[aria-controls="mobile-menu"]'
+          'button[aria-controls="mobile-menu"]',
         );
         const mobileMenu = document.getElementById("mobile-menu");
 
@@ -318,27 +318,6 @@
               </div>
             </a>
 
-              <!-- Lian Tung -->
-            <a href="/lian-tung">
-              <div
-                class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
-              >
-                <div class="w-full overflow-hidden rounded-t-lg">
-                  <img
-                    class="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
-                    src="img/Lian Tung Headshot.jpg"
-                    alt="Lian Tung"
-                  />
-                </div>
-                <div class="p-4">
-                  <h3 class="text-xl font-bold text-gray-800">Lian Tung</h3>
-                  <p class="mb-2 mt-1 text-gray-600 text-md font-bold">
-                    Senior
-                  </p>
-                </div>
-              </div>
-            </a>
-
             <!-- Juan Gandara -->
             <a href="juan-gandara">
               <div
@@ -360,7 +339,7 @@
               </div>
             </a>
 
-                <!-- Bea Seno-->
+            <!-- Bea Seno-->
             <a href="/bea-seno">
               <div
                 class="flex flex-col h-full overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-300 cursor-pointer transition hover:border-black"
@@ -429,9 +408,9 @@
                   <p
                     class="mt-1 mb-2 text-gray-600 text-md font-bold leading-tight text-pretty"
                   >
-                    Aerospace Engineering Student at The Georgia Institute of Technology
+                    Aerospace Engineering Student at The Georgia Institute of
+                    Technology
                   </p>
-                
                 </div>
               </div>
             </a>
@@ -453,10 +432,11 @@
                 </div>
                 <div class="p-4">
                   <h3 class="text-xl font-bold text-gray-800">Zach Miller</h3>
-                  <p class="mt-1 mb-2 text-gray-600 text-md font-bold leading-tight">
+                  <p
+                    class="mt-1 mb-2 text-gray-600 text-md font-bold leading-tight"
+                  >
                     Aircraft Maintenance Programs Engineer at Airbus
                   </p>
-                  
                 </div>
               </div>
             </a>
