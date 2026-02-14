@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body class="bg-gray-300">
-    <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
+     <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
       <div class="container mx-auto px-4">
         <div class="flex h-16 items-center justify-between relative">
           <!-- Logo -->
@@ -30,27 +30,19 @@
           <!-- Desktop nav -->
           <div class="flex-1 justify-center hidden sm:flex">
             <div class="flex space-x-4 items-center">
-              <!-- Team dropdown -->
-              <div class="relative group">
-                <a
-                  href="/team"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
-                >
-                  Team
-                </a>
-         
-              </div>
+              <a
+                href="/team"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
+              >
+                Team
+              </a>
 
-              <!-- Projects dropdown -->
-              <div class="relative group">
-                <a
-                  href="/projects"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
-                >
-                  Projects
-                </a>
-                
-              </div>
+              <a
+                href="/projects"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
+              >
+                Projects
+              </a>
 
               <a
                 href="/publications"
@@ -75,7 +67,7 @@
             <button
               type="button"
               id="mobile-menu-toggle"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -114,40 +106,22 @@
       <!-- Mobile menu -->
       <div class="sm:hidden hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Team mobile dropdown -->
-          <div class="rounded-md">
-            <div
-              class="flex items-center justify-between px-3 py-2 hover:bg-gray-700 rounded-md"
-            >
-              <a
-                href="/team"
-                class="text-base font-medium text-white hover:text-white"
-                >Team</a
-              >
-            </div>
-            
-          </div>
-
-          <!-- Projects mobile dropdown -->
-          <div class="rounded-md">
-            <div
-              class="flex items-center justify-between px-3 py-2 hover:bg-gray-700 rounded-md"
-            >
-              <a
-                href="/projects"
-                class="text-base font-medium text-white hover:text-white"
-                >Projects</a
-              >
-       
-            </div>
-          </div>
-
+          <a
+            href="/team"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Team</a
+          >
+          <a
+            href="/projects"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Projects</a
+          >
           <a
             href="/publications"
             class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
             >Publications</a
           >
-           <a
+          <a
             href="/about"
             class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
             >About</a
