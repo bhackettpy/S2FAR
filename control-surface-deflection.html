@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S2FAR</title>
+    <link
+      rel="icon"
+      href="img/S2FAR_Plane_Only_Transparent_Gray.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-gray-300">
+    <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex h-16 items-center justify-between relative">
+          <!-- Logo -->
+          <div class="flex items-center flex-shrink-0">
+            <a href="/" class="flex items-center">
+              <img
+                class="h-8 w-auto"
+                src="img/S2FAR_Plane_Transparent_Gray.png"
+                alt="S2FAR"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop nav -->
+          <div class="flex-1 justify-center hidden sm:flex">
+            <div class="flex space-x-4 items-center">
+              <a
+                href="/team"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
+              >
+                Team
+              </a>
+
+              <a
+                href="/projects"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
+              >
+                Projects
+              </a>
+
+              <a
+                href="/publications"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+                >Publications</a
+              >
+              <a
+                href="/about"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+                >About</a
+              >
+              <a
+                href="/contact"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+                >Contact</a
+              >
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+            <button
+              type="button"
+              id="mobile-menu-toggle"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="block size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <svg
+                class="hidden size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="sm:hidden hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a
+            href="/team"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Team</a
+          >
+          <a
+            href="/projects"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Projects</a
+          >
+          <a
+            href="/publications"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Publications</a
+          >
+          <a
+            href="/about"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >About</a
+          >
+          <a
+            href="/contact"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const menuToggle = document.querySelector(
+        'button[aria-controls="mobile-menu"]',
+      );
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        // Swap icons
+        const icons = menuToggle.querySelectorAll("svg");
+        icons.forEach((icon) => icon.classList.toggle("hidden"));
+      });
+    </script>
+
+    <div class="pt-16">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="container mx-auto px-4 mt-4">
+        <ol class="flex items-center space-x-2 text-sm text-gray-700">
+          <!-- Home Icon -->
+          <li>
+            <a href="/" class="hover:text-gray-900 flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h4a1 1 0 001-1v-4h4v4a1 1 0 001 1h4a1 1 0 001-1V10"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <!-- Chevron Divider -->
+          <li class="text-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-3 h-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </li>
+
+          <!-- Section -->
+          <li>
+            <a href="/projects" class="hover:text-gray-900">Projects</a>
+          </li>
+
+          <!-- Chevron Divider -->
+          <li class="text-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-3 h-3"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </li>
+
+          <!-- Current Page -->
+          <li class="text-gray-900 font-medium truncate max-w-[60vw]">
+            Multi-Fidelity Validation of Control Surface Deflection Predictions
+            Using FlightStream®
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="relative bg-gray-300 lg:px-24 px-4 pt-24 pb-20">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap items-start">
+          <div class="w-full px-12 md:w-1/2 order-1 md:order-1">
+            <div class="max-w-xl">
+              <!-- Main Image -->
+              <div
+                class="aspect-[4/3] w-full overflow-hidden rounded-lg shadow-md"
+              >
+                <img
+                  id="mainImage"
+                  src="img/robot-flightstream.jpg"
+                  class="w-full h-full object-cover transition-all duration-300"
+                  alt="Main"
+                />
+              </div>
+
+              <!-- Thumbnails -->
+              <div class="flex justify-center gap-3 mt-6">
+                <img
+                  src="img/robot-flightstream.jpg"
+                  class="thumb w-16 h-16 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-gray-400 transition"
+                  alt="Thumb 1"
+                />
+                <img
+                  src="img/s2far-team-flightstream-test.jpg"
+                  class="thumb w-16 h-16 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-gray-400 transition"
+                  alt="Thumb 2"
+                />
+                <img
+                  src="img/flight-stream-test.jpg"
+                  class="thumb w-16 h-16 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-gray-400 transition"
+                  alt="Thumb 3"
+                />
+                <img
+                  src="img/windshaper.jpg"
+                  class="thumb w-16 h-16 object-cover rounded-md cursor-pointer border-2 border-transparent hover:border-gray-400 transition"
+                  alt="Thumb 4"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full md:w-1/2 order-2 md:order-2 sm:mb-5 md:pr-24 mt-12 md:mt-0"
+          >
+            <div class="flex items-center gap-6">
+              <img class="h-8" src="img/Flightstream.png" />
+              <img
+                class="h-8"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Oklahoma_State_University_system_logo.svg/2560px-Oklahoma_State_University_system_logo.svg.png"
+              />
+              <img class="h-8" src="img/KSU.png" />
+            </div>
+            <h1 class="text-3xl font-bold mt-5 text-pretty max-w-prose">
+              Multi-Fidelity Validation of Control Surface Deflection
+              Predictions Using FlightStream®
+            </h1>
+
+            <p class="mt-6 leading-relaxed text-pretty">
+              Accurate aerodynamic modeling is a bottleneck for
+              simulation-to-flight work—especially when control surface effects,
+              viscous behavior, and separation start to matter. This project
+              establishes a multi-fidelity validation pipeline that compares
+              FlightStream® (mid-fidelity) predictions against high-fidelity CFD
+              and experimental measurements to quantify modeling accuracy and
+              guide how these tools should be used in control design. The
+              initial study focuses on control-surface effectiveness
+              characterization, including static deflection sweeps and dynamic
+              testing to support system identification and control development.
+            </p>
+            <p class="mt-6 leading-relaxed text-pretty">
+              A key outcome is a validated pathway for generating aerodynamic
+              databases and stability/control derivatives that are practical for
+              iterative design. The workflow integrates geometry-based modeling
+              (e.g., OpenVSP to solver-ready models), CFD benchmarking, and
+              WindShaper testing with a 6-axis load cell, along with system
+              identification methods to extract empirical control derivatives.
+              The longer-term goal (and the next step for this project) is to
+              extend the same approach beyond a single surface—characterizing
+              the full vehicle across relevant angles of attack/sideslip, rates,
+              and control effectors—so the resulting models can directly feed a
+              high-confidence digital twin for flight testing and control-law
+              validation.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-24 flex flex-wrap justify-center">
+          <!-- Tabs -->
+          <div class="flex gap-8 text-lg font-semibold">
+            <button
+              id="tabVideos"
+              class="tab-btn tab-underline tab-underline-active text-gray-900"
+              data-target="videosSection"
+            >
+              Videos
+            </button>
+
+            <button
+              id="tabPublications"
+              class="tab-btn tab-underline text-gray-600 hover:text-gray-800"
+              data-target="publicationsSection"
+            >
+              Publications
+            </button>
+
+            <button
+              id="tabData"
+              class="tab-btn tab-underline text-gray-600 hover:text-gray-800"
+              data-target="dataSection"
+            >
+              Data
+            </button>
+          </div>
+        </div>
+
+        <div id="videosSection" class="mt-12">
+          <div class="w-full flex flex-wrap justify-center gap-8 items-stretch">
+            <!-- CARD 1 -->
+            <div class="md:w-1/4 w-full flex">
+              <div
+                data-video="https://www.youtube.com/embed/hIHzoAZlF1M?autoplay=1"
+                class="video-card flex flex-col flex-1 cursor-pointer rounded-xl p-3 bg-gray-300/40 transition duration-300 hover:bg-gray-300/60 hover:shadow-lg group"
+              >
+                <div class="relative overflow-hidden rounded-md aspect-video">
+                  <img
+                    src="https://img.youtube.com/vi/hIHzoAZlF1M/hqdefault.jpg"
+                    class="w-full h-full object-cover transform transition duration-300 group-hover:scale-105"
+                    alt="Video thumbnail"
+                  />
+
+                  <!-- Hover tint -->
+                  <div
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300"
+                  ></div>
+
+                  <!-- Play button (hidden until hover) -->
+                  <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      class="w-12 h-12 text-white drop-shadow-lg"
+                      fill="currentColor"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="mt-3 flex flex-col flex-grow">
+                  <h3 class="text-lg font-semibold leading-tight">
+                    S2F-BD213 30kts WindShape System Identification (WARNING - LOUD!) 
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+          
+          </div>
+        </div>
+
+        <div id="publicationsSection" class="mt-12 hidden">
+          <p class="leading-relaxed">
+            <!-- Add your publications content here -->
+            Coming soon...
+          </p>
+        </div>
+        <div id="dataSection" class="mt-12 hidden">
+          <p class="leading-relaxed">
+            <!-- Add your publications content here -->
+            Coming soon...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div
+      id="videoModal"
+      class="fixed inset-0 bg-black bg-opacity-60 items-center justify-center z-50 hidden"
+    >
+      <!-- Close Button (moved outside the white box) -->
+      <button
+        id="closeVideoModal"
+        class="absolute top-6 right-6 p-3 rounded-full bg-white/90 backdrop-blur-sm text-gray-900 shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+        aria-label="Close video modal"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <div
+        class="bg-white rounded-xl shadow-xl w-11/12 md:w-3/4 lg:w-1/2 p-4 relative"
+      >
+        <!-- Video Container -->
+        <div class="aspect-video w-full rounded-lg overflow-hidden">
+          <iframe
+            id="modalVideo"
+            class="w-full h-full"
+            src=""
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const carousel = document.getElementById("dataCarousel");
+      const nextBtn = document.getElementById("dataNext");
+      const prevBtn = document.getElementById("dataPrev");
+      const dot = document.getElementById("scrollDot");
+
+      // Arrow navigation
+      nextBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: carousel.clientWidth, behavior: "smooth" });
+      });
+
+      prevBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: -carousel.clientWidth, behavior: "smooth" });
+      });
+
+      // Floating dot update
+      function updateDot() {
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        const percentage = carousel.scrollLeft / maxScroll;
+
+        // Track width minus dot width
+        const trackWidth = carousel.clientWidth;
+        const dotWidth = dot.offsetWidth;
+
+        const x = percentage * (trackWidth - dotWidth);
+
+        dot.style.left = `${x}px`;
+      }
+
+      carousel.addEventListener("scroll", updateDot);
+      window.addEventListener("resize", updateDot);
+
+      updateDot();
+    </script>
+
+    <script>
+      const videoCards = document.querySelectorAll(".video-card");
+      const videoModal = document.getElementById("videoModal");
+      const modalVideo = document.getElementById("modalVideo");
+      const closeVideoModal = document.getElementById("closeVideoModal");
+
+      // Open modal
+      videoCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const videoURL = card.getAttribute("data-video");
+          modalVideo.src = videoURL;
+
+          videoModal.classList.remove("hidden");
+          videoModal.classList.add("flex");
+        });
+      });
+
+      // Close modal (button)
+      closeVideoModal.addEventListener("click", () => {
+        videoModal.classList.add("hidden");
+        videoModal.classList.remove("flex");
+        modalVideo.src = "";
+      });
+
+      // Close modal (click outside)
+      videoModal.addEventListener("click", (e) => {
+        if (e.target === videoModal) {
+          videoModal.classList.add("hidden");
+          videoModal.classList.remove("flex");
+          modalVideo.src = "";
+        }
+      });
+    </script>
+
+    <script>
+      const mainImage = document.getElementById("mainImage");
+      const thumbs = document.querySelectorAll(".thumb");
+
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener("click", () => {
+          mainImage.src = thumb.src;
+
+          // Optional: highlight active thumbnail
+          thumbs.forEach((t) => t.classList.remove("border-gray-600"));
+          thumb.classList.add("border-gray-600");
+        });
+      });
+    </script>
+
+    <script>
+      const tabButtons = document.querySelectorAll(".tab-btn");
+
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Reset all tabs
+          tabButtons.forEach((b) => {
+            b.classList.remove("tab-underline-active", "text-gray-900");
+            b.classList.add("text-gray-600");
+          });
+
+          // Activate clicked tab
+          btn.classList.add("tab-underline-active", "text-gray-900");
+          btn.classList.remove("text-gray-600");
+
+          // Hide all sections
+          document.getElementById("videosSection").classList.add("hidden");
+          document
+            .getElementById("publicationsSection")
+            .classList.add("hidden");
+          document.getElementById("dataSection").classList.add("hidden");
+
+          // Show selected section
+          const target = btn.getAttribute("data-target");
+          document.getElementById(target).classList.remove("hidden");
+        });
+      });
+    </script>
+  </body>
+  <footer class="bg-gray-800 text-white mt-16">
+    <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <!-- Branding + Icons + Copyright -->
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <img
+              src="img/S2FAR_Plane_Transparent_Gray.png"
+              alt="S2FAR logo"
+              class="h-8 w-auto"
+            />
+            <h3 class="text-lg font-semibold tracking-wide">
+              S2FAR Laboratory
+            </h3>
+          </div>
+
+          <p class="text-xs text-white">
+            &copy; 2026 Simulation to Flight Applied Research Laboratory. All
+            rights reserved.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold uppercase mb-4 tracking-wider">
+            Explore
+          </h4>
+          <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <li><a href="/team" class="hover:underline">Team</a></li>
+            <li><a href="/projects" class="hover:underline">Projects</a></li>
+            <li>
+              <a href="/publications" class="hover:underline">Publications</a>
+            </li>
+            <li>
+              <a href="/about" class="hover:underline">About</a>
+            </li>
+            <li><a href="/contact" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>
