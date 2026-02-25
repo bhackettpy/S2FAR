@@ -14,22 +14,24 @@
   </head>
 
   <body class="bg-gray-300">
+    {% include nav.html %}
     <script>
-      const menuToggle = document.querySelector(
-        'button[aria-controls="mobile-menu"]',
-      );
-      const mobileMenu = document.getElementById("mobile-menu");
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(
+          'button[aria-controls="mobile-menu"]',
+        );
+        const mobileMenu = document.getElementById("mobile-menu");
 
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+        if (!menuToggle || !mobileMenu) return;
 
-        // Swap icons
-        const icons = menuToggle.querySelectorAll("svg");
-        icons.forEach((icon) => icon.classList.toggle("hidden"));
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+
+          const icons = menuToggle.querySelectorAll("svg");
+          icons.forEach((icon) => icon.classList.toggle("hidden"));
+        });
       });
     </script>
-    {% include nav.html %}
-    {{ content }}
-    {% include footer.html %}
+    {{ content }} {% include footer.html %}
   </body>
 </html>
