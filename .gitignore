@@ -1,0 +1,18 @@
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby dependencies
+/vendor/
+.bundle/
+Gemfile.lock
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Node/Tailwind (if you ever add a build pipeline)
+node_modules/
+dist/

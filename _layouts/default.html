@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S2FAR</title>
+    <link
+      rel="icon"
+      href="img/S2FAR_Plane_Only_Transparent_Gray.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+
+  <body class="bg-gray-300">
+    <script>
+      const menuToggle = document.querySelector(
+        'button[aria-controls="mobile-menu"]',
+      );
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        // Swap icons
+        const icons = menuToggle.querySelectorAll("svg");
+        icons.forEach((icon) => icon.classList.toggle("hidden"));
+      });
+    </script>
+    {% include nav.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>
