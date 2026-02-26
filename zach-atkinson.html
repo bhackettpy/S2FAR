@@ -1,8 +1,169 @@
----
-layout: default
-title: "Zach Atkinson"
-description: "Researcher in aerospace systems and autonomy."
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S2FAR</title>
+    <link
+      rel="icon"
+      href="img/S2FAR_Plane_Only_Transparent_Gray.png"
+      type="image/x-icon"
+    />
+    
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./custom.css" />
+  </head>
+  <body class="bg-gray-300">
+   <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex h-16 items-center justify-between relative">
+          <!-- Logo -->
+          <div class="flex items-center flex-shrink-0">
+            <a href="/" class="flex items-center">
+              <img
+                class="h-8 w-auto"
+                src="img/S2FAR_Plane_Transparent_Gray.png"
+                alt="S2FAR"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop nav -->
+          <div class="flex-1 justify-center hidden sm:flex">
+            <div class="flex space-x-4 items-center">
+              <a
+                href="/team"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
+              >
+                Team
+              </a>
+
+              <a
+                href="/projects"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white group-hover:bg-gray-700 group-hover:text-white hover:bg-gray-700 hover:text-white"
+              >
+                Projects
+              </a>
+
+              <a
+                href="/publications"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+                >Publications</a
+              >
+              <a
+                href="/hangar"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+                >Hangar</a
+              >
+
+              <a
+                href="/about"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+                >About</a
+              >
+              <a
+                href="/contact"
+                class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white"
+                >Contact</a
+              >
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+            <button
+              type="button"
+              id="mobile-menu-toggle"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="block size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <svg
+                class="hidden size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="sm:hidden hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a
+            href="/team"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Team</a
+          >
+
+          <a
+            href="/projects"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Projects</a
+          >
+
+          <a
+            href="/publications"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Publications</a
+          >
+          <a
+            href="/hangar"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Hangar</a
+          >
+          <a
+            href="/about"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >About</a
+          >
+          <a
+            href="/contact"
+            class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-white"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const menuToggle = document.querySelector(
+        'button[aria-controls="mobile-menu"]'
+      );
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        // Swap icons
+        const icons = menuToggle.querySelectorAll("svg");
+        icons.forEach((icon) => icon.classList.toggle("hidden"));
+      });
+    </script>
+
     <section class="relative bg-gray-300 lg:px-24 px-4 pt-32 pb-20">
       <div class="container mx-auto">
         <div class="flex">
@@ -74,5 +235,51 @@ description: "Researcher in aerospace systems and autonomy."
         </div>
       </div>
     </section>
+  </body>
+   <footer class="bg-gray-800 text-white mt-16">
+      <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <!-- Branding + Icons + Copyright -->
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <img
+                src="img/S2FAR_Plane_Transparent_Gray.png"
+                alt="S2FAR logo"
+                class="h-8 w-auto"
+              />
+              <h3 class="text-lg font-semibold tracking-wide">
+                S2FAR Laboratory
+              </h3>
+            </div>
 
-  
+            <p class="text-xs text-white">
+              &copy; 2026 Simulation to Flight Applied Research Laboratory. All
+              rights reserved.
+            </p>
+          </div>
+
+
+          <div>
+            <h4 class="text-sm font-semibold uppercase mb-4 tracking-wider">
+              Explore
+            </h4>
+            <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+             <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              <li><a href="/team" class="hover:underline">Team</a></li>
+              <li><a href="/projects" class="hover:underline">Projects</a></li>
+              <li>
+                <a href="/publications" class="hover:underline">Publications</a>
+              </li>
+              <li>
+                <a href="/hangar" class="hover:underline">Hangar</a>
+              </li>
+              <li>
+                <a href="/about" class="hover:underline">About</a>
+              </li>
+              <li><a href="/contact" class="hover:underline">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+</html>
